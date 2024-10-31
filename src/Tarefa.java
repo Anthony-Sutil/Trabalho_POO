@@ -27,6 +27,26 @@ abstract class Tarefa {
         this.responsavel = "";
     }
 
+    public String gerarResumo() {
+        StringBuilder resumo = new StringBuilder();
+        resumo.append("Resumo da Tarefa:\n");
+        resumo.append("Título: ").append(titulo).append("\n");
+        resumo.append("Categoria: ").append(categoria).append("\n");
+        resumo.append("Prioridade: ").append(prioridade).append("\n");
+        resumo.append("Status: ").append(concluida ? "Concluída" : "Pendente").append("\n");
+        resumo.append("Data de Entrega: ").append(dataEntrega).append("\n");
+        resumo.append("Dias até a entrega: ").append(diasAteEntrega()).append("\n");
+        resumo.append("Responsável: ").append(responsavel.isEmpty() ? "Não atribuído" : responsavel).append("\n");
+        resumo.append("Etiquetas: ").append(String.join(", ", etiquetas)).append("\n");
+
+        if (estaAtrasada()) {
+            resumo.append("ATENÇÃO: Esta tarefa está atrasada!\n");
+        }
+
+        return resumo.toString();
+    }
+
+
     public abstract void exibirDetalhes();
 
     public void marcarComoConcluida() {
