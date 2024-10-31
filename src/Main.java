@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         try {
-            List<Usuario> usuarios = LeitorDeArquivo.carregarUsuarios("usuarios.txt");
+            List<Usuario> usuarios = LeitorDeArquivo.carregarUsuarios("usuarios.csv");
             if (usuarios.isEmpty()) {
                 System.out.println("Nenhum usuário encontrado.");
                 return;
