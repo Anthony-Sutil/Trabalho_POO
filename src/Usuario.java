@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Classe Usuario
 class Usuario {
     private String nome;
     private List<Tarefa> tarefas;

@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-// Classe para ler dados de um arquivo CSV
 class LeitorDeArquivo {
     public static List<Usuario> carregarUsuarios(String caminhoArquivo) throws TarefaException {
         List<Usuario> usuarios = new ArrayList<>();

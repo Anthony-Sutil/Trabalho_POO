@@ -23,7 +23,7 @@ public class Main {
                 System.out.print("Escolha uma opção: ");
 
                 int opcao = scanner.nextInt();
-                scanner.nextLine(); // Consumir a nova linha
+                scanner.nextLine();
 
                 switch (opcao) {
                     case 1:
@@ -54,7 +54,7 @@ public class Main {
         String descricao = scanner.nextLine();
         System.out.print("Local: ");
         String local = scanner.nextLine();
-        Date dataEntrega = new Date(); // Usando a data atual para simplificar
+        Date dataEntrega = new Date();
         Tarefa tarefa = new TarefaPessoal(titulo, descricao, dataEntrega, local);
         usuario.adicionarTarefa(tarefa);
         System.out.println("Tarefa pessoal adicionada com sucesso.");
@@ -67,7 +67,7 @@ public class Main {
         String descricao = scanner.nextLine();
         System.out.print("Projeto: ");
         String projeto = scanner.nextLine();
-        Date dataEntrega = new Date(); // Usando a data atual para simplificar
+        Date dataEntrega = new Date();
         Tarefa tarefa = new TarefaTrabalho(titulo, descricao, dataEntrega, projeto);
         usuario.adicionarTarefa(tarefa);
         System.out.println("Tarefa de trabalho adicionada com sucesso.");
