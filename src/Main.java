@@ -55,7 +55,7 @@ public class Main {
         System.out.print("Local: ");
         String local = scanner.nextLine();
         Date dataEntrega = new Date();
-        Tarefa tarefa = new TarefaPessoal(titulo, descricao, dataEntrega, local);
+        Tarefa tarefa = new TarefaPessoal(titulo, descricao, dataEntrega, local, 10);
         usuario.adicionarTarefa(tarefa);
         System.out.println("Tarefa pessoal adicionada com sucesso.");
     }
@@ -68,7 +68,7 @@ public class Main {
         System.out.print("Projeto: ");
         String projeto = scanner.nextLine();
         Date dataEntrega = new Date();
-        Tarefa tarefa = new TarefaTrabalho(titulo, descricao, dataEntrega, projeto);
+        Tarefa tarefa = new TarefaTrabalho(titulo, descricao, dataEntrega, projeto, 10);
         usuario.adicionarTarefa(tarefa);
         System.out.println("Tarefa de trabalho adicionada com sucesso.");
     }

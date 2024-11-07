@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,12 +10,11 @@ abstract class Tarefa {
     protected Date dataCriacao;
     protected Date dataUltimaModificacao;
     protected boolean concluida;
-    protected int prioridade; // 1 (baixa) a 5 (alta)
+    protected int prioridade; //vai de 1 a 5
     protected List<String> etiquetas;
-    protected String categoria;
     protected String responsavel;
 
-    public Tarefa(String titulo, String descricao, Date dataEntrega, int prioridade, String categoria) {
+    public Tarefa(String titulo, String descricao, Date dataEntrega, int prioridade) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.dataEntrega = dataEntrega;
@@ -23,15 +23,14 @@ abstract class Tarefa {
         this.concluida = false;
         this.prioridade = prioridade;
         this.etiquetas = new ArrayList<>();
-        this.categoria = categoria;
         this.responsavel = "";
     }
 
+    //1 metodo
     public String gerarResumo() {
         StringBuilder resumo = new StringBuilder();
         resumo.append("Resumo da Tarefa:\n");
         resumo.append("Título: ").append(titulo).append("\n");
-        resumo.append("Categoria: ").append(categoria).append("\n");
         resumo.append("Prioridade: ").append(prioridade).append("\n");
         resumo.append("Status: ").append(concluida ? "Concluída" : "Pendente").append("\n");
         resumo.append("Data de Entrega: ").append(dataEntrega).append("\n");
@@ -46,7 +45,7 @@ abstract class Tarefa {
         return resumo.toString();
     }
 
-
+    //metodo abstrato
     public abstract void exibirDetalhes();
 
     public void marcarComoConcluida() {
@@ -92,9 +91,39 @@ abstract class Tarefa {
         return !concluida && new Date().after(dataEntrega);
     }
 
+    //2 metodo
     public long diasAteEntrega() {
         long diff = dataEntrega.getTime() - new Date().getTime();
         return diff / (24 * 60 * 60 * 1000);
+    }
+
+
+    //3 Metodo (os dois contam como 1)
+    public void aumentarPrioridade() {
+        if (prioridade < 5) {
+            prioridade++;
+            dataUltimaModificacao = new Date();
+        } else {
+            System.out.println("A prioridade já está no valor máximo (5).");
+        }
+    }
+
+    public void reduzirPrioridade() {
+        if (prioridade > 1) {
+            prioridade--;
+            dataUltimaModificacao = new Date();
+        } else {
+            System.out.println("A prioridade já está no valor mínimo (1).");
+        }
+    }
+
+    //4 Metodo
+    public void reagendarEntrega(int diasExtras) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(dataEntrega);
+        calendar.add(Calendar.DAY_OF_YEAR, diasExtras);
+        dataEntrega = calendar.getTime();
+        dataUltimaModificacao = new Date();
     }
 
     // Getters e Setters
@@ -140,14 +169,6 @@ abstract class Tarefa {
         return new ArrayList<>(etiquetas);
     }
 
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-        this.dataUltimaModificacao = new Date();
-    }
 
     public String getResponsavel() {
         return responsavel;
