@@ -1,6 +1,6 @@
 # 🗂️ Sistema de Gerenciamento de tarefas - Notion Clone
 
-Este é um projeto de Sistema de Gerenciamento de Arquivos inspirado no Notion. Ele permite que os usuários organizem notas, listas e documentos de forma hierárquica, com etiquetas, tags e diferentes tipos de conteúdo em uma interface intuitiva e personalizável.
+Este é um projeto de Sistema de Gerenciamento de tarefas inspirado no Notion. Ele permite que os usuários organizem notas, listas e documentos de forma hierárquica, com etiquetas, tags e diferentes tipos de conteúdo em uma interface intuitiva e personalizável.
 
 ---
 
