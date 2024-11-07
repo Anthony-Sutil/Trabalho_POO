@@ -4,7 +4,7 @@ class TarefaTrabalho extends Tarefa {
     private String projeto;
 
     public TarefaTrabalho(String titulo, String descricao, Date dataEntrega, String projeto, int prioridade) {
-        super(titulo, descricao, dataEntrega, prioridade, "Trabalho");
+        super(titulo, descricao, dataEntrega, prioridade);
         this.projeto = projeto;
     }
 

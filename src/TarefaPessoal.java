@@ -4,7 +4,7 @@ class TarefaPessoal extends Tarefa {
     private String local;
 
     public TarefaPessoal(String titulo, String descricao, Date dataEntrega, String local, int prioridade) {
-        super(titulo, descricao, dataEntrega, prioridade, "Pessoal");
+        super(titulo, descricao, dataEntrega, prioridade);
         this.local = local;
     }
 
