@@ -11,7 +11,7 @@ class TarefaTrabalho extends Tarefa {
     @Override
     public void exibirDetalhes() {
         System.out.println("Tarefa de Trabalho: " + titulo);
-        System.out.println("Descrição: " + descricao);
+        System.out.println("Descrição: " + descricao) ;
         System.out.println("Projeto: " + projeto);
         System.out.println("Data de Entrega: " + dataEntrega);
         System.out.println("Prioridade: " + getPrioridade());
