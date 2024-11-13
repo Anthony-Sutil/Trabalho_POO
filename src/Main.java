@@ -4,19 +4,16 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        // Tentativa de carregar usuários a partir de um arquivo CSV (opcional)
         try {
             LeitorDeArquivo leitor = new LeitorDeArquivo();
-            leitor.carregarUsuarios("usuarios.csv"); // Modifique para o caminho correto do arquivo
+            leitor.carregarUsuarios("usuarios.csv");
         } catch (IOException e) {
             System.out.println("Erro ao carregar arquivo de usuários: " + e.getMessage());
         }
 
-        // Exemplo de uso da nova herança
         Evento evento = new Evento(new Date(), "Reunião de Projeto");
         evento.exibirEvento();
 
-        // Inicializando a interface gráfica
         SwingUtilities.invokeLater(() -> {
             TarefaManagerGUI gui = new TarefaManagerGUI();
             gui.setVisible(true);
