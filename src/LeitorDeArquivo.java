@@ -18,7 +18,7 @@ public class LeitorDeArquivo {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
             String linha;
             while ((linha = br.readLine()) != null) {
-                Usuario usuario = new Usuario(linha.trim(), ""); // Email vazio
+                Usuario usuario = new Usuario(linha.trim(), "");
                 usuarios.add(usuario);
             }
         }

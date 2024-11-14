@@ -30,7 +30,6 @@ public class TarefaManagerGUI extends JFrame {
         areaTarefas.setBackground(new Color(245, 245, 245));
         JScrollPane scrollPane = new JScrollPane(areaTarefas);
 
-        // Campos de entrada
         campoTitulo = new JTextField(15);
         campoDescricao = new JTextField(15);
         campoNivelImportancia = new JTextField(5);
@@ -91,7 +90,6 @@ public class TarefaManagerGUI extends JFrame {
         gbc.gridy = 5;
         painelInput.add(botaoAdicionar, gbc);
 
-        // Layout principal
         JPanel painelPrincipal = new JPanel(new BorderLayout());
         painelPrincipal.add(scrollPane, BorderLayout.CENTER);
         painelPrincipal.add(painelInput, BorderLayout.SOUTH);
@@ -151,7 +149,7 @@ public class TarefaManagerGUI extends JFrame {
         campoDescricao.setText("");
         campoNivelImportancia.setText("");
         campoDataFinalizacao.setText("");
-        comboBoxResponsavel.setSelectedIndex(-1); // Limpar seleção do comboBox
+        comboBoxResponsavel.setSelectedIndex(-1);
     }
 
     public static void main(String[] args) {
