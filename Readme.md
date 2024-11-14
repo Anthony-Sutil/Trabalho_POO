@@ -1,4 +1,6 @@
-<p allign="center"><a href="">![Trotion (1)](https://github.com/user-attachments/assets/82cd00ed-ec9d-4259-ba60-e29f224fd7a8)</a></p>
+<p allign="center">
+  <img>![Trotion (1)](https://github.com/user-attachments/assets/82cd00ed-ec9d-4259-ba60-e29f224fd7a8)</img>
+</p>
 
 
 # 🗂️ Sistema de Gerenciamento de tarefas - Trotion
