@@ -12,6 +12,10 @@ public class Usuario {
         this.tarefas = new ArrayList<>();
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     public void adicionarTarefa(Tarefa tarefa) {
         tarefas.add(tarefa);
     }

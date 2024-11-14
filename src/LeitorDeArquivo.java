@@ -1,20 +1,25 @@
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
 public class LeitorDeArquivo {
     public List<Usuario> carregarUsuarios(String caminhoArquivo) throws IOException {
         List<Usuario> usuarios = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(caminhoArquivo))) {
+
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(caminhoArquivo);
+
+        if (inputStream == null) {
+            throw new IOException("Arquivo não encontrado: " + caminhoArquivo);
+        }
+
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
             String linha;
             while ((linha = br.readLine()) != null) {
-                String[] dados = linha.split(",");
-                if (dados.length == 2) {
-                    Usuario usuario = new Usuario(dados[0], dados[1]);
-                    usuarios.add(usuario);
-                }
+                Usuario usuario = new Usuario(linha.trim(), ""); // Email vazio
+                usuarios.add(usuario);
             }
         }
         return usuarios;
