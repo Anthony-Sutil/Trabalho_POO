@@ -1,4 +1,5 @@
-![Trotion](https://github.com/user-attachments/assets/2768ff57-c1ce-472b-87b9-821091422baf)
+##![Trotion (1)](https://github.com/user-attachments/assets/82cd00ed-ec9d-4259-ba60-e29f224fd7a8)
+
 # 🗂️ Sistema de Gerenciamento de tarefas - Trotion
 
 Este é um projeto de Sistema de Gerenciamento de tarefas inspirado no Notion. Ele permite que os usuários organizem notas, listas e documentos de forma hierárquica, com etiquetas, tags e diferentes tipos de conteúdo em uma interface intuitiva e personalizável.
