@@ -1,4 +1,4 @@
-<div>![Trotion (1)](https://github.com/user-attachments/assets/82cd00ed-ec9d-4259-ba60-e29f224fd7a8)</div>
+![Trotion (1)](https://github.com/user-attachments/assets/82cd00ed-ec9d-4259-ba60-e29f224fd7a8)
 
 # 🗂️ Sistema de Gerenciamento de tarefas - Trotion
 
